@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Gett1</string>
+    <string name="dialog_end">\"Your order has been accepted successfully. /n An availble driver will call you soon.</string>
+    <string name="ok">OK</string>
 </resources>

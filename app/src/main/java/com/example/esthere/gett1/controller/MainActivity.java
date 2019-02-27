@@ -1,6 +1,7 @@
 package com.example.esthere.gett1.controller;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import com.example.esthere.gett1.R;
 import com.example.esthere.gett1.model.datasource.Globals;
@@ -17,8 +17,6 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;
-
-import java.util.Date;
 
 public class MainActivity extends Activity {
 
@@ -54,8 +52,8 @@ public class MainActivity extends Activity {
     }
 
     public void addRideClicked(View view) {
-        int hour = ((TimePicker) findViewById(R.id.timeRide)).getHour();
-        int minute = ((TimePicker) findViewById(R.id.timeRide)).getMinute();
+        //int hour = ((TimePicker) findViewById(R.id.timeRide)).getHour();
+        //int minute = ((TimePicker) findViewById(R.id.timeRide)).getMinute();
         //Date time=new Date(hour,minute,0);
         Ride ride = new Ride();//(null, null, !((RadioButton) findViewById(R.id.rbLeaving)).isChecked(), time, name.getText().toString(), phone.getText().toString(), email.getText().toString());
         ride.setName(name.getText().toString());
@@ -84,6 +82,14 @@ public class MainActivity extends Activity {
 //        hashMap.put("key-2","value 2 ");
 //        hashMap.put("key-3","value 3 ");
 //        myRef.setValue(hashMap);
+
+
+        sendBroadcast(view);
+
+        DialogEnd.Dialog(MainActivity.this, "Successful order", getString(R.string.dialog_end), getString(R.string.ok));
+
+        //finish();
+
     }
 
 
@@ -129,6 +135,16 @@ public class MainActivity extends Activity {
 
             }
         });
+    }
+
+    public void sendBroadcast(View view) {
+        Intent intent = new Intent("com.example.esthere.gett1");
+        intent.putExtra("user","esthere");
+        intent.putExtra("password","1111");
+        intent.putExtra("tel","0548420225");
+        intent.putExtra("lng",21.3434);
+        intent.putExtra("lat",21.3434);
+        sendBroadcast(intent);
     }
 
     /**

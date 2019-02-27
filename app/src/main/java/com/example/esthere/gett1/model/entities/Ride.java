@@ -29,6 +29,7 @@ public class Ride {
     private String phone;
     private String email;
     private String driverId;
+    private String key;
 
     //constructors
     public Ride() {
@@ -54,6 +55,14 @@ public class Ride {
     }
 
     //getters &setters
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
 
     public void setStatus(Status status) {
         this.status = status;

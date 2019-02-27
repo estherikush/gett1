@@ -11,7 +11,10 @@ public class FireBase implements IBackend {
     @Override
     public void addRide(Ride ride) {
 
-        rides.push().setValue(ride);
+        ride.setStatus(Ride.Status.AVAILABLE);
+        DatabaseReference dbref= rides.push();
+        ride.setKey(dbref.getKey());
+        dbref.setValue(ride);
         return;
 
 //        HashMap<String,Object> hashMap = new HashMap();
