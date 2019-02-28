@@ -10,12 +10,12 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="24dp"
 
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +31,7 @@
             android:id="@+id/nameCostumer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person_white_24dp"
             android:ems="10"
             android:hint="name"
             android:inputType="textPersonName" />
@@ -67,8 +68,9 @@
                     android:id="@+id/textView2"
                     android:layout_width="84dp"
                     android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_place_white_24dp"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="Destination" />
+                    android:text="Source" />
 
                 <fragment
                     android:id="@+id/place_autocomplete_fragment_targetLocation"
@@ -89,8 +91,9 @@
                     android:id="@+id/textView"
                     android:layout_width="84dp"
                     android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_place_white_24dp"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="Source" />
+                    android:text="Destination" />
 
                 <fragment
                     android:id="@+id/place_autocomplete_fragment_sourceLocation"
@@ -115,55 +118,55 @@
         <!--android:layout_height="wrap_content"-->
         <!--android:completionHint="Insert target location" />-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="117dp"
-            android:orientation="horizontal">
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="117dp"-->
+        <!--android:orientation="horizontal">-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:orientation="vertical">-->
 
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+        <!--<RadioGroup-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1">-->
 
-                    <RadioButton
-                        android:id="@+id/rbLeaving"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:text="Leaving Time" />
+        <!--<RadioButton-->
+        <!--android:id="@+id/rbLeaving"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:checked="true"-->
+        <!--android:text="Leaving Time" />-->
 
-                    <RadioButton
-                        android:id="@+id/rbArriving"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:checked="false"
-                        android:text="Arriving Time" />
+        <!--<RadioButton-->
+        <!--android:id="@+id/rbArriving"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:checked="false"-->
+        <!--android:text="Arriving Time" />-->
 
-                </RadioGroup>
+        <!--</RadioGroup>-->
 
-            </LinearLayout>
+        <!--</LinearLayout>-->
 
-            <TimePicker
-                android:id="@+id/timeRide"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:timePickerMode="spinner" />
+        <!--<TimePicker-->
+        <!--android:id="@+id/timeRide"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:timePickerMode="spinner" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="sendBroadcast"
+            android:onClick="addRideClicked"
             android:text="Add" />
 
         <!--<EditText-->

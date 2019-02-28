@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
         ride.setName(name.getText().toString());
         ride.setPhone(phone.getText().toString());
         ride.setEmail(email.getText().toString());
-        ride.setArrivingOrLeaving(!((RadioButton) findViewById(R.id.rbLeaving)).isChecked());
+        //ride.setArrivingOrLeaving(!((RadioButton) findViewById(R.id.rbLeaving)).isChecked());
         //ride.setSourceLocation();
         //ride.setTargetLocation();
         //ride.setTimeRide(time);
@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
 //        myRef.setValue(hashMap);
 
 
-        sendBroadcast(view);
+        //sendBroadcast(view);
 
         DialogEnd.Dialog(MainActivity.this, "Successful order", getString(R.string.dialog_end), getString(R.string.ok));
 
